@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Inspiration</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+</head>
+<body>
+  <div class="container">
+    <h1 class="heading">A Tribute to Shane Warne</h1>
+
+    <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSB8U3C8d3US0ZLleKsDVA2ewuWHbNomhmzpTX8Qm--g5YBg6ZrvQQFvKiwgmzDB6K1-L0cFvqVxU0hQJBFR0O3Jw" alt="Dr. Kalam" class="profile-img" />
+
+    <p class="intro">
+      Shane Warne, the Australian leg-spin bowler, is widely known as the "King of Spin".
+    </p>
+
+    <div class="content">
+      <p>
+        He became an iconic figure in cricket, known for his blonde hair, signature "flippers," and ability to shatter records. His legacy as one of the greatest bowlers of all time is cemented, and his nickname "King of Spin" is a testament to his impact on the sport. 
+      </p>
+    </div>
+
+    <!-- Timeline Section -->
+    <h2 class="section-title">📜 Timeline</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <span class="year">1969</span>
+        <p>Born in Melbourne, Australia.</p>
+      </div>
+      <div class="timeline-item">
+        <span class="year">1992</span>
+        <p>Makes Test debut as a 22-year-old against India<p>
+      </div>
+      <div class="timeline-item">
+        <span class="year">1993</span>
+        <p>Delivered the "Ball of the Century" to Mike Gatting in the Ashes series</p>
+      </div>
+      <div class="timeline-item">
+        <span class="year">1998</span>
+        <p>Told by surgeons he might never play cricket again after an operation on his troublesome shoulder..</p>
+      </div>
+      <div class="timeline-item">
+        <span class="year">1999</span>
+        <p>Named Man of the Match in Australia's World Cup final victory over Pakistan at Lord's.</p>
+      </div>
+      <div class="timeline-item">
+        <span class="year">2000</span>
+        <p>Becomes Australia's highest Test wicket taker by passing Dennis Lillee's 355 in New Zealand. Named as one of Wisden's Five Cricketers of the Century..</p>
+      </div>
+      <div class="timeline-item">
+        <span class="year">2004</span>
+        <p>Overtakes Muttiah Muralitharan in India to claim the world record for the most Test wickets in his own right.</p>
+      </div>
+      <div class="timeline-item">
+        <span class="year">2006</span>
+        <p>Announces his retirement from Test cricket, starting from the end of the Ashes.</p>
+      </div>
+      <div class="timeline-item">
+        <span class="year">2008-2013</span>
+        <p>Continued his cricket career in the Indian Premier League (IPL) with the Rajasthan Royals, even winning the inaugural IPL title.</p>
+      </div>
+      <div class="timeline-item">
+        <span class="year">2022</span>
+        <p>Died of a suspected heart attack while on holiday in Thailand</p>
+      </div>
+    </div>
+
+    <!-- Gallery Section -->
+    <h2 class="section-title">📸 Gallery</h2>
+    <div class="gallery">
+      <img src="https://mies-lawcollege.com/wp-content/uploads/2022/03/Shane-Warne-Bowling1.jpg" alt="Warne 1" />
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1opW-AwJpJfKqqqSKMoWOd2GqZzEf0Q9qQg&s" alt="Warne 2" />
+      <img src="https://content.api.news/v3/images/bin/d705d35a9426f8875ae9ceaa4b99790c" alt="Warne 3" />
+      <img src="https://www.royalchallengers.com/PRRCB01/public/styles/1061x767_landscape/public/2020-08/Sachin%20and%20Warne_0.jpg?h=f27f7201&itok=HNKRueVx" alt="Warne 4" />
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXs76Pw_GbHGW0lzvcSW54KS_Pk5pV92iCsg&s" alt="Warne 5" />
+    </div>
+  </div>
+  <button id="scrollToTopBtn" title="Back to top">
+  <i class="fas fa-arrow-up"></i>
+</button>
+
+<script>
+  const scrollBtn = document.getElementById("scrollToTopBtn");
+
+  window.onscroll = function () {
+    scrollBtn.style.display = window.scrollY > 300 ? "block" : "none";
+  };
+
+  scrollBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+
+    // Add bounce effect
+    scrollBtn.classList.add("bounce");
+    scrollBtn.addEventListener("animationend", () => {
+      scrollBtn.classList.remove("bounce");
+    }, { once: true });
+  });
+</script
+</body>
+</html>
