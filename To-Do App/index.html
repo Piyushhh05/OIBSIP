@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>To-Do App with Priorities</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-container">
+    <h1>📝 Daily To-Do List</h1>
+
+    <!-- Add Task Section -->
+    <div class="input-section">
+        <label>Task Name:</label>
+      <input type="text" id="taskInput" placeholder="Enter a new task..." />
+      <label>Priority:</label>
+      <select id="prioritySelect">
+        <option value="High">High 🔴</option>
+        <option value="Medium">Medium 🟠</option>
+        <option value="Low">Low 🟢</option>
+      </select>
+      <button onclick="addTask()">Add Task</button>
+    </div>
+
+    <!-- Filter and Search Section -->
+    <div class="filter-section">
+      <label>Filter: </label>
+      <select onchange="renderTasks()" id="filterPriority">
+        <option value="All">All</option>
+        <option value="High">High 🔴</option>
+        <option value="Medium">Medium 🟠</option>
+        <option value="Low">Low 🟢</option>
+      </select>
+      <label> Search Tasks:</label>
+      <input type="text" id="searchInput" placeholder="Search tasks..." oninput="renderTasks()" />
+    </div>
+
+    <!-- Pending and Completed Sections -->
+    <div class="task-section">
+      <h2>📌 Pending Tasks</h2>
+      <ul id="pendingTasks"></ul>
+    </div>
+
+    <div class="task-section">
+      <h2>✅ Completed Tasks</h2>
+      <ul id="completedTasks"></ul>
+    </div>
+  </div>
+
+   <div class="theme-toggle">
+  <label class="switch">
+    <input type="checkbox" id="themeToggle">
+    <span class="slider round"></span>
+  </label>
+  <span id="themeLabel">Light Mode</span>
+</div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>

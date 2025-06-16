@@ -1,0 +1,201 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #f8f9fa, #e0eafc);
+  padding: 20px;
+  color: #333;
+  transition: background 0.3s;
+}
+
+.app-container {
+  max-width: 700px;
+  margin: auto;
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0px 8px 24px rgba(0,0,0,0.1);
+  animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+h1, h2 {
+  text-align: center;
+  color: #2c3e50;
+}
+
+.input-section, .filter-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+input[type="text"], select {
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  flex: 1;
+}
+
+button {
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background: #45a049;
+  transform: scale(1.05);
+}
+
+.task-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  margin: 8px 0;
+  background: #f1f1f1;
+  border-left: 8px solid #999;
+  border-radius: 8px;
+  animation: slideIn 0.3s ease;
+  transition: box-shadow 0.3s;
+}
+
+.task:hover {
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.task span {
+  flex-grow: 1;
+}
+
+.task small {
+  display: block;
+  font-size: 11px;
+  color: #666;
+}
+
+.task button {
+  margin-left: 5px;
+  background-color: #e0e0e0;
+  color: black;
+  border: none;
+  border-radius: 5px;
+}
+
+.task.completed {
+  background-color: #d4edda;
+  border-left-color: #28a745;
+  box-shadow: 0 0 8px rgba(40, 167, 69, 0.3);
+}
+
+.priority-high { border-left-color: #e74c3c; }
+.priority-medium { border-left-color: #e67e22; }
+.priority-low { border-left-color: #27ae60; }
+
+
+/* Toggle Switch */
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 52px;
+  height: 28px;
+  margin-right: 10px;
+}
+
+.switch input { display: none; }
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0;
+  right: 0; bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 28px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 22px; width: 22px;
+  left: 3px; bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #4CAF50;
+}
+
+input:checked + .slider:before {
+  transform: translateX(24px);
+}
+
+/* Light Theme (default) */
+body {
+  background: #f0f0f0;
+  color: #333;
+  transition: background 0.4s, color 0.4s;
+}
+
+.app-container {
+  background-color: white;
+  color: black;
+}
+
+/* Dark Theme */
+body.dark {
+  background: #121212;
+  color: #e0e0e0;
+}
+
+body.dark .app-container {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+}
+
+body.dark .task {
+  background-color: #2a2a2a;
+  border-left-color: #555;
+}
+
+body.dark button {
+  background-color: #333;
+  color: #fff;
+}
+
+body.dark input,
+body.dark select {
+  background-color: #1e1e1e;
+  color: #fff;
+  border: 1px solid #555;
+}
