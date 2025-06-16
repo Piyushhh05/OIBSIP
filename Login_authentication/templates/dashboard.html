@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <style>
+    body {
+      background: linear-gradient(120deg, #209f59, #60d3fd, #0d2841);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    @keyframes gradientBG {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 20px;
+      padding: 40px;
+      backdrop-filter: blur(15px);
+      box-shadow: 0 8px 32px 0 rgba(9, 22, 205, 0.37);
+      text-align: center;
+      width: 350px;
+    }
+
+    .card h2 {
+      color: #fff;
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+
+    .card p {
+      color: #e0f7fa;
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    .logout-btn {
+      padding: 10px 25px;
+      border: none;
+      border-radius: 25px;
+      background-color: #bacef7;
+      color: #074168;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .logout-btn:hover {
+      background-color: #70e5e5;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>Welcome, {{ username }} 🤗</h2>
+    <p>Hoping for the Best Always</p>
+    <a href="/logout"><button class="logout-btn">Logout</button></a>
+  </div>
+</body>
+</html>
