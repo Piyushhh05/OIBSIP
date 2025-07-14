@@ -20,3 +20,17 @@ A simple yet secure login authentication system using **Python + Flask**, design
 - Frontend: HTML5, CSS3 (minimal)
 
 ---
+
+##  Project Structure
+
+Login_authentication/
+├── app.py # Main Flask application
+├── readme.md
+└── templates/
+├── login.html
+├── register.html 
+├── dashboard.html 
+└── home.html
+└──static/
+├──style.css
+└──logo.png
